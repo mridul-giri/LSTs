@@ -1,1 +1,1 @@
-{"root":["./src/index.ts","./src/utils/mintToken.ts"],"version":"5.9.2"}
+{"root":["./src/index.ts","./src/utils/burnToken.ts","./src/utils/mintToken.ts","./src/utils/sendNativeToken.ts"],"version":"5.9.2"}

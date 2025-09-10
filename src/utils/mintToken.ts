@@ -12,14 +12,14 @@ const privateKey = process.env.VAULT;
 const mintAdd = new PublicKey(process.env.MINT_ADD!);
 const keypair = Keypair.fromSecretKey(bs58.decode(privateKey!));
 
-export async function minToken(fromAddress: string, amount: number) {
-  const fromAddressPublickey = new PublicKey(fromAddress);
+export async function mintToken(senderAddress: string, amount: number) {
+  const senderAddressPublickey = new PublicKey(senderAddress);
 
   const ataAddress = await getOrCreateAssociatedTokenAccount(
     connection,
     keypair,
     mintAdd,
-    fromAddressPublickey,
+    senderAddressPublickey,
     false,
     undefined,
     undefined,
